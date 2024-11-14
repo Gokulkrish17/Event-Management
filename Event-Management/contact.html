@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+</head>
+<style>
+    * {
+       margin: 0;
+       padding: 0;
+   }
+   body{
+        padding: 0px 50px;
+    }
+    .outline{ 
+        border-left:  1px solid rgba(0, 0, 0, 0.248);
+        border-right:  1px solid rgba(0, 0, 0, 0.248);
+        box-shadow: 0px 0px 3px rgb(108, 107, 107);
+        height: max-content;
+    }
+   .Header{
+       text-align: center;
+       padding-top: 50px;
+   }
+   .Header .one{
+       display: inline;
+       font-family: cursive;
+       color: rgb(75, 133, 226);
+   }
+   .Header .two{
+       display: inline;
+       font-family: cursive;
+       color: rgb(221, 21, 171);
+   }
+   .Header .head{
+       margin-top: 3px;
+       color: rgb(2, 2, 43);
+       text-transform: uppercase;
+       font-family: monospace;
+       font-size: large;
+   }
+   .Header .content{
+       margin-top: 50px;
+       font-family: sans-serif;
+       text-transform: capitalize;
+       font-style: italic;
+       font-size: small;
+       color: rgb(68, 67, 67);
+   }
+   .Navbar{
+       background-color: rgb(113, 159, 226);
+       margin-top: 20px;
+   }
+   .Navbar ul{
+       list-style-type: none;
+       text-align: center;
+       padding: 5px;
+   }
+   .Navbar ul li{
+       display: inline;
+       padding: 5px;
+   }
+   .Navbar ul li a{
+       text-decoration: none;
+       color: white;
+       font-family: sans-serif;
+       text-transform: uppercase;
+       font-size: small;
+       padding: 0 10px;
+   }
+   .Navbar ul li a:hover{
+        color: rgb(123, 122, 122);
+    }
+    .contactus{
+        margin: 20px 80px;
+    }
+   .contactus h1{
+    font-family: sans-serif;
+    color: rgba(255, 0, 0, 0.616);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: x-large;
+    padding: 20px 0;
+   }
+   .contactus img{
+    padding: 20px 0;
+    width: 100%;
+    height: auto;
+   }
+   .contactus p{
+       font-family: sans-serif;
+        color: rgb(118, 116, 116);
+        /* font-size: small; */
+        line-height: 1.5;
+   }
+   .contactus h2{
+    font-family: sans-serif;
+    margin: 30px 0;
+    text-transform: uppercase;
+    font-weight: 600;
+   }
+   .flex{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   }
+   .freeconsult{
+    width: 30%;
+    height: auto;
+    margin: 20px 80px;
+    background-color: rgb(232, 235, 237);
+    padding: 20px 20px;
+   }
+   .freeconsult h2{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    padding: 10px 0;
+   }
+   .freeconsult p{
+    font-family: sans-serif;
+        color: rgb(48, 47, 47);  
+        padding: 10px 0;
+   }
+   .freeconsult label{
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: medium;
+        line-height: 2;
+    }
+    .freeconsult label::after{
+        content: "*";
+        color:  rgba(255, 0, 0, 0.616);
+    }
+    .freeconsult input{
+        width: 50%;
+        height: auto;
+        padding: 7px;
+        border-radius: 3px;
+        border: 1px solid rgb(198, 194, 194);
+        box-shadow: 0px 0px 2px rgb(185, 184, 184);
+    }
+    .freeconsult textarea{
+        width: 70%;
+        height: auto;
+        padding: 7px;
+        border-radius: 3px;
+        border: 1px solid rgb(198, 194, 194);
+        box-shadow: 0px 0px 2px rgb(185, 184, 184);
+    }
+   .getintouch{
+    width: 30%;
+    height: auto;
+    margin: 20px 80px;
+    background-color:white;
+    padding: 20px 0;
+}
+.getintouch h3{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    padding: 10px 0;
+}
+.getintouch h4{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    padding: 10px 0;
+}
+.getintouch p{
+    font-family: sans-serif;
+        color: rgb(48, 47, 47);  
+        padding: 10px 0;
+
+}
+   .Certifications{
+    margin-top: 100px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .Certifications div{
+        padding: 15px;
+    }
+    .Certifications img{
+        width: 300px;
+        height: 100px;
+    }
+    .copyrights{
+        margin-top: 70px;
+        background-color: rgb(33, 32, 32);
+        color: white;
+        padding: 25px;
+        font-family: sans-serif;
+        line-height:1.5 ;
+        text-align: center;
+    }
+    @media screen and (max-width:1800px) and (min-width:800px) {
+        .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+                display: none;
+        }
+    }
+    @media screen and (max-width:800px) and (min-width:580px) {
+        .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+                display: none;
+        }
+        .freeconsult{
+    width: 60%;
+    height: auto;
+    margin: 20px 80px;
+    background-color: rgb(232, 235, 237);
+    padding: 20px 20px;
+   }
+   .getintouch{
+    width: 60%;
+    height: auto;
+    margin: 20px 80px;
+    background-color:white;
+    padding: 20px 0;
+}
+.Certifications img{
+        width: 180px;
+        height: 90px;
+    }
+    }
+    @media screen and (max-width:580px) and (min-width:350px) {
+
+        .Navbar{
+        display: none;
+    }
+    .Navbar ul li{
+        display: block;
+    }
+    .dropbtn img{
+        padding-bottom:5px ;
+    }
+    .dropbtn:hover .Navbar{
+        display: inline-block;
+        position: relative;
+        left: -12px;
+    }
+        .freeconsult{
+    width: 100%;
+    height: auto;
+    margin: 20px 30px;
+    background-color: rgb(232, 235, 237);
+    padding: 20px 20px;
+   }
+   .getintouch{
+    width: 100%;
+    height: auto;
+    margin: 20px 30px;
+    background-color:white;
+    padding: 20px 0;
+}
+.Certifications img{
+        width: 100px;
+        height: 50px;
+    }
+    }
+    
+</style>
+<body>
+    <div class="outline">
+    <div class="Header">
+        <h1 class="one">Dream </h1>
+        <h1 class="two">Light</h1>
+        <p class="head">Event Planner<p>
+        <p class="content">Letting you be a guest at your own event</p>
+    </div>
+    <div class="dropbtn" style="display: inline;">
+        <img style="width: 15px; height: 15px;float: left;" src="fas fa bar.jpg"> 
+      <div class="Navbar">
+        <ul>
+            <li><a href="Home.html">Home </a></li>
+            <li><a href="about.html">About </a></li>
+            <li><a href="service.html">Services </a></li>
+            <li><a href="review.html">Reviews </a></li>
+            <li><a href="contact.html">Contact </a></li>
+        </ul>
+      </div> <br><br><hr>
+    </div>
+    <div class="contactus">
+        <h1>Seriously - we can't wait to meet you!</h1>
+        <img src="marvel.jpg">
+        <p>Dream Light Events focuses on events all over Washington, including Tacoma, Olympia, Arlington, and Wenatchee.
+           Let’s get together and see if we’re a good fit for your wedding or event.</p>
+           <h2>request free consultation</h2>
+    </div>
+    <div class="flex">
+    <div class="freeconsult">
+        <h2>contact me</h2>
+        <p>Fields marked with an * are required</p>
+        <form action="">
+
+        <label>Name</label> <br>
+             <input type="text">  <br>
+
+            <label>Email</label> <br>
+            <input type="e-mail"> <br>
+
+            <label>Phone</label> <br>
+            <input type="number"> <br>
+
+            <label>City</label> <br>
+            <input type="text"> <br>
+
+            <label>Message</label> <br>
+            <textarea cols="30" rows="10"></textarea> <br>
+
+            <input type="submit" style="background-color: rgba(27, 157, 217, 0.896); color: white;width: 30%;height: auto;font-size: medium;">
+        </form>
+    </div>
+    <div class="getintouch">
+            <h3>get in touch</h3>
+            <h4>reach us</h4>
+            <p>V1, Gala No. 24, Mehra Industrial Estate,
+                 Andheri – Kurla Road, Near DSK Madhuban, Opp. Sakinaka Telephone Exchange, Sakinaka, Andheri (E), Washington – 400 072.</p>
+                 <p>dreamlight@event.com</p>
+                 <p>+91 9876543212</p>
+                 <p>+91 9182736455</p> <br> <br>
+                 <p style="font-weight: 500;"><b>CALL US TOLLFREE</b></p>
+                 <p>1-800-1234-567</p>
+                </div>
+                <p style="margin: 50px 125px; font-family: sans-serif; color: rgb(48, 47, 47); ">Inquiries and correspondence will be addressed during business hours Monday to Friday; 
+we may not respond to new inquiries over the weekend, as we are typically working fabulous events at that time. <br><br> hello@dreamlightevents.com</p>
+</div>
+    <div class="Certifications">
+        <div class="logo1"><img src="NACE-Logo.webp" ></div>
+        <div class="logo2"><img src="chamber-logo.webp" ></div>
+        <div class="logo3"><img src="men logo.jpg" ></div>
+        </div>
+        
+        <div class="copyrights">
+            <p>COPYRIGHT 2024 © DREAM LIGHT EVENTS <br>
+                TERMS OF SERVICE</p>
+        </div>
+    </div>
+</body>
+</html>

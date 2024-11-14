@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+</head>
+
+<style>
+     * {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        padding: 0px 50px;
+    }
+    .outline{ 
+        border-left:  1px solid rgba(0, 0, 0, 0.248);
+        border-right:  1px solid rgba(0, 0, 0, 0.248);
+        box-shadow: 0px 0px 3px rgb(108, 107, 107);
+        height: max-content;
+    }
+    .Header{
+        text-align: center;
+        padding-top: 50px;
+    }
+    .Header .one{
+        display: inline;
+        font-family: cursive;
+        color: rgb(75, 133, 226);
+    }
+    .Header .two{
+        display: inline;
+        font-family: cursive;
+        color: rgb(221, 21, 171);
+    }
+    .Header .head{
+        margin-top: 3px;
+        color: rgb(2, 2, 43);
+        text-transform: uppercase;
+        font-family: monospace;
+        font-size: large;
+    }
+    .Header .content{
+        margin-top: 50px;
+        font-family: sans-serif;
+        text-transform: capitalize;
+        font-style: italic;
+        font-size: small;
+        color: rgb(68, 67, 67);
+    }
+    .Navbar{
+        background-color: rgb(113, 159, 226);
+        margin-top: 20px;
+    }
+    .Navbar ul{
+        list-style-type: none;
+        text-align: center;
+        padding: 5px;
+    }
+    .Navbar ul li{
+        display: inline;
+        padding: 5px;
+    }
+    .Navbar ul li a{
+        text-decoration: none;
+        color: white;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-size: small;
+        padding: 0 10px;
+    }
+    .Navbar ul li a:hover{
+        color: rgb(123, 122, 122);
+    }
+    .aboutus{
+        margin: 0 50px;
+        float: left;
+        width: 40%;
+    }
+    .aboutus img{
+        border-radius: 50%;
+        height: 200px;
+        max-width: 200px;
+        border: 1px solid rgb(231, 231, 91);
+        margin: 50px;
+    }
+    .aboutus p{
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+        color: rgb(91, 83, 83);
+    }
+    .owner{
+        margin: 0 50px;
+        float: right;
+        width: 40%;
+    }
+    .owner img{
+        margin-top: 50px;
+        height: 420px;
+        max-width: 300px;
+    }
+    .owner h4{
+        margin-top: 8px;
+        font-family: sans-serif;
+        font-weight: lighter;
+    }
+    .owner h5{
+        margin-top: 10px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        color: gray;
+    }
+    .owner p{
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+        color: rgb(91, 83, 83);
+    }
+    .seniorplanner{
+        margin: 0 50px;
+        float: left;
+        width: 40%;
+    }
+    .seniorplanner img{
+        margin-top: 50px;
+        height: 420px;
+        max-width: 300px;
+    }
+    .seniorplanner h4{
+        margin-top: 8px;
+        font-family: sans-serif;
+        font-weight: lighter;
+    }
+    .seniorplanner h5{
+        margin-top: 10px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        color: gray;
+    }
+    .seniorplanner p{
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+        color: rgb(91, 83, 83);
+    }
+    .Coordinator{
+        margin: 0 50px;
+        float: right;
+        width: 40%;
+    }
+    .Coordinator img{
+        margin-top: 50px;
+        height: 320px;
+        max-width: 400px;
+    }
+    .Coordinator h4{
+        margin-top: 8px;
+        font-family: sans-serif;
+        font-weight: lighter;
+    }
+    .Coordinator h5{
+        margin-top: 10px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        color: gray;
+    }
+    .Coordinator p{
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+        color: rgb(91, 83, 83);
+    }
+    .Asst-Coordinator{
+        margin: 0 50px;
+        float: left;
+        width: 40%;
+    }
+    .Asst-Coordinator img{
+        margin-top: 50px;
+        height: 420px;
+        max-width: 300px;
+    }
+    .Asst-Coordinator h4{
+        margin-top: 8px;
+        font-family: sans-serif;
+        font-weight: lighter;
+    }
+    .Asst-Coordinator h5{
+        margin-top: 10px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        color: gray;
+    }
+    .Asst-Coordinator p{
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+        color: rgb(91, 83, 83);
+    }
+    .Life-Coordinator{
+        margin: 0 50px;
+        float: right;
+        width: 40%;
+    }
+    .Life-Coordinator img{
+        margin-top: 50px;
+        height: 320px;
+        max-width: 400px;
+    }
+    .Life-Coordinator h4{
+        margin-top: 8px;
+        font-family: sans-serif;
+        font-weight: lighter;
+    }
+    .Life-Coordinator h5{
+        margin-top: 10px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        color: gray;
+    }
+    .Life-Coordinator p{
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+        color: rgb(91, 83, 83);
+    }
+    .Work{
+        margin: 0 50px;
+        float: left;
+        width: 40%;
+    }
+    .Work img{
+        margin-top: 50px;
+        height: 420px;
+        max-width: 300px;
+    }
+    .Work h4{
+        margin-top: 8px;
+        font-family: sans-serif;
+        font-weight: lighter;
+    }
+    .Work h5{
+        margin-top: 10px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        color: gray;
+    }
+    .Work p{
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+        color: rgb(91, 83, 83);
+    }
+    .staff{
+        margin: 0 50px;
+        float: right;
+        width: 40%;
+    }
+    .staff img{
+        margin-top: 50px;
+        height: 420px;
+        max-width: 300px;
+    }
+    .staff h4{
+        margin-top: 8px;
+        font-family: sans-serif;
+        font-weight: lighter;
+    }
+    .staff h5{
+        margin-top: 10px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        color: gray;
+    }
+    .staff p{
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+        color: rgb(91, 83, 83);
+    }
+    .utube{
+        clear: both;
+        padding: 150px;
+        display: flex;
+        justify-content: center;
+    }
+    .Certifications{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .Certifications div{
+        padding: 15px;
+    }
+    .Certifications img{
+        width: 300px;
+        height: 100px;
+    }
+    .copyrights{
+        margin-top: 70px;
+        background-color: rgb(33, 32, 32);
+        color: white;
+        padding: 25px;
+        font-family: sans-serif;
+        line-height:1.5 ;
+        text-align: center;
+    }
+    @media screen and (max-width:1800px) and (min-width:1050px) {
+        .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+                display: none;
+        }
+    }
+    @media screen and (max-width:1050px) and (min-width:870px) {
+        .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+                display: none;
+        }
+        .aboutus img{
+        border-radius: 50%;
+        height: auto;
+        width: 90%;
+        border: 1px solid rgb(231, 231, 91);
+        margin: 50px;
+    }
+    .owner img{
+        margin-top: 50px;
+        height: auto;
+        width: 90%;
+    }
+    .seniorplanner img{
+        margin-top: 50px;
+        height: auto;
+        width: 90%;
+    }
+        .Coordinator img{
+        margin-top: 50px;
+        height:auto;
+        width: 95%;
+    }
+    .Asst-Coordinator img{
+        margin-top: 50px;
+        height: auto;
+        width: 90%;
+    }
+    .Life-Coordinator img{
+        margin-top: 50px;
+        height: auto;
+        width: 95%;
+    }
+    .Work img{
+        margin-top: 50px;
+        height: auto;
+        width: 90%;
+    }
+    .staff img{
+        margin-top: 50px;
+        height: auto;
+        width: 90%;
+    }
+    }
+   @media screen and (max-width:870px) and (min-width:580px){
+    .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+                display: none;
+        }    
+    .owner{
+        float: left;
+    }
+    .Coordinator{
+        float: left;
+    }
+    .Life-Coordinator{
+        float: left;
+    }
+    .staff{
+        float: left;
+    }
+    
+   } 
+   @media screen and (max-width:580px) and (min-width:500px){
+    .Navbar{
+        display: none;
+    }
+    .Navbar ul li{
+        display: block;
+    }
+    .dropbtn img{
+        padding-bottom:5px ;
+    }
+    .dropbtn:hover .Navbar{
+        display: inline-block;
+        position: relative;
+        left: -12px;
+    }
+    .owner{
+        float: left;
+    }
+    .Coordinator{
+        float: left;
+    }
+    .Coordinator img{
+        width: 320px;
+        height: 360px;
+    }
+    .Life-Coordinator{
+        float: left;
+    }
+    .Life-Coordinator img{
+        width: 320px;
+        height: 360px;
+    }
+    .staff{
+        float: left;
+    }
+    .Certifications img{
+        width: 180px;
+        height: 90px;
+    }
+    
+   }
+   @media screen and (max-width:500px) and (min-width:400px){
+    .Navbar{
+        display: none;
+    }
+    .Navbar ul li{
+        display: block;
+    }
+    .dropbtn img{
+        padding-bottom:5px ;
+    }
+    .dropbtn:hover .Navbar{
+        display: inline-block;
+        position: relative;
+        left: -12px;
+    }
+    .owner{
+        float: left;
+    }
+    .owner img{
+        width: 250px;
+        height: 300px;
+    }
+    .Coordinator{
+        float: left;
+    }
+    .Coordinator img{
+        width: 250px;
+        height: 300px;
+    }
+    .Life-Coordinator{
+        float: left;
+    }
+    .Life-Coordinator img{
+        width: 250px;
+        height: 300px;
+    }
+    .staff{
+        float: left;
+    }
+    .staff img{
+        width: 250px;
+        height: 300px;
+    }
+    .Asst-Coordinator img{
+        width: 250px;
+        height: 300px;
+    }
+    .Work img{
+        width: 250px;
+        height: 300px;
+    }
+    .seniorplanner img{
+        width: 250px;
+        height: 300px;
+    }
+    .Certifications img{
+        width: 100px;
+        height: 50px;
+    }
+    
+   }
+</style>
+
+<body>
+    <div class="outline">
+
+    <div class="Header">
+        <h1 class="one">Dream </h1>
+        <h1 class="two">Light</h1>
+        <p class="head">Event Planner<p>
+        <p class="content">Letting you be a guest at your own event</p>
+    </div>
+    <div class="dropbtn" style="display: inline;">
+        <img style="width: 15px; height: 15px;float: left;" src="fas fa bar.jpg"> 
+    <div class="Navbar">
+        <ul>
+            <li><a href="Home.html">Home </a></li>
+            <li><a href="about.html">About </a></li>
+            <li><a href="service.html">Services </a></li>
+            <li><a href="review.html">Reviews </a></li>
+            <li><a href="contact.html">Contact </a></li>
+        </ul> 
+    </div><br><br><hr>
+    </div> 
+
+    <div class="aboutus">
+        <img src="logo.jpg" >
+        <p>Welcome to Dream Light, where we turn your dreams into unforgettable events. With a passion for precision,
+             our dedicated team brings creativity and meticulous planning to every celebration. From intimate affairs to grand occasions,
+              we specialize in crafting unique experiences that reflect your vision. At Dream Light, we don't just plan events; 
+              we create lasting memories. Let us be the architects of your special moments, ensuring each detail is perfect.
+             Trust us to make your celebration extraordinary - because at Dream Light, every event is a masterpiece in the making.</p>
+    </div>
+    <div class="owner">
+        <img src="jhony depp.jpg">
+        <h4>JHONNY DEPP </h4>
+            <h5>Lead Planner/Coordinator/Owner </h5>
+            
+          <p>Jhonny is authentic and honest plus with over 22 years of event management experience he brings knowledge,
+             problem solving skills, emotional stability, and consistent service to all his clients. 
+             With this many years of working on events Jhonny has become a great profiler of clients and guests. <br> <br>
+            ​
+            Jhonny has a morning routine that is very slow; so many times things don’t get started until after 10am. 
+             Being raised in the military he has lived all over the United States with the majority of his family living in Washington State. <br><br>
+            
+            For Jhonny his ownership into Dream Light Events is not a hobby or side-job, but a full-time career, commitment, and dream.​​ <br><br>
+            
+            Want to get more in-depth?  Read a recent blog he wrote about how Dream Light Events got started and more here.</p>
+    </div>
+    <div class="seniorplanner">
+        <img src="34074e8bbb5e3fb8f0394ceac6b33053.jpg">
+        <h4>CHRIS HEMSWORTH </h4>
+            <h5>Senior Wedding Planner & Corporate Logistic Coordinator </h5>
+            
+          <p>Chris is our lead Chaos Manager and, as a father of two young children,
+             balancing chaos is key; multi-tasking and organization keep him moving forward along with a strong cup of coffee.
+              His experience in customer service management, photography and in the cosmetic/beauty world makes him the perfect 
+              team member to find vendors to fit all types of needs.
+             He is passionate about his morning coffee… or all day coffee rather. Chris is born and raised in the South Sound area.</p>
+    </div>
+    <div class="Coordinator">
+        <img src="Robert-Downey-Jr.-Smile.jpg">
+        <h4>ROBERT DOWNEY JR</h4>
+            <h5>Senior Day-Of Coordinator </h5>
+            
+          <p>Robert prides himself in making sure events run smoothly and is quick to make adjustments. 
+            He has years of experience assisting at weddings and managing youth sports teams. <br> <br>
+            
+            Robert and his wife live out on the Kitsap Peninsula in the home he grew up in and has lived in Washington State his entire life. 
+             If you want a wedding in Maui,
+             Robert is your gal, he loves that island and has vacationed there many times, but really he just loves the sun and heat.</p>
+    </div>
+    <div class="Asst-Coordinator">
+        <img src="tom_holland_by_gage_skidmore_2a5b5019_large.jpg">
+        <h4>TOM HOLLAND</h4>
+            <h5>Assistant Day-Of Coordinator </h5>
+            
+          <p> Tom is our Day-Of Coordinator for our Central Washington clients. He has lived his entire life in Quincy,
+             Washington working with his family’s honey bee business, and will be studying at Central Washington University.  
+            Tom is fluent in Spanish and has first-hand experience in planning a Quinceanera celebration.</p>
+    </div>
+    <div class="Life-Coordinator">
+        <img src="jason.jpg">
+        <h4>JASON MOMOA & LISA BONET</h4>
+            <h5>Celebration of Life Coordinators </h5>
+            
+          <p>Jason & Lisa bring a special touch of warmth and love as they facilitate our celebration of life events. 
+            Jason has years working as a pastor and Lisa currently owns a personal concierge services business.
+            Together, they have hosted many events at their own home in the Puyallup area and understand the compassion needed
+             to ease the stress and allow you to focus on sharing time with your loved ones.</p>
+    </div>
+
+    <div class="Work">
+        <img src="bruce.jpg">
+        <h4>BRUCE BANNER</h4>
+            <h5>Work Coordinator  </h5>
+            
+          <p> Bruce is one of our Day-Of Coordinators for our Western Washington clients. 
+            He has experience in catering, but really his skills as a school teacher make her perfect for managing people
+             and details on the day of an event.  
+            In his spare time, he loves to hike and travel and hang out with his 4 fur babies.</p>
+    </div>
+    <div class="staff">
+        <img src="steve.jpg">
+        <h4>STEVE ROGGERS</h4>
+            <h5>Staff Copywriter </h5>
+            
+          <p>
+
+            Steve views the world through a storytelling lens. He is an accomplished and published writer
+             and teaches writing through Green River College. He works with our clients on targeted and imaginative messaging,
+             copywriting and even customized murder mysteries for all types of events.  You should check out hir murder mystery books on Amazon too.</p>
+    </div>
+    <div class="utube">
+    <iframe width="1500" height="600" src="https://www.youtube.com/embed/-Gh9WSLmrjw?si=iJHUZHC2qjfq-onO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="Certifications">
+    <div class="logo1"><img src="NACE-Logo.webp" ></div>
+    <div class="logo2"><img src="chamber-logo.webp" ></div>
+    <div class="logo3"><img src="men logo.jpg" ></div>
+    </div>
+    
+    <div class="copyrights">
+        <p>COPYRIGHT 2024 © DREAM LIGHT EVENTS <br>
+            TERMS OF SERVICE</p>
+    </div>
+
+</div>
+</body>
+
+</html>

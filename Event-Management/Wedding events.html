@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding events</title>
+</head>
+<style>
+     * {
+       margin: 0;
+       padding: 0;
+   }
+   body{
+        padding: 0px 50px;
+    }
+    .outline{ 
+        border-left:  1px solid rgba(0, 0, 0, 0.248);
+        border-right:  1px solid rgba(0, 0, 0, 0.248);
+        box-shadow: 0px 0px 3px rgb(108, 107, 107);
+        height: max-content;
+    }
+   .Header{
+       text-align: center;
+       padding-top: 50px;
+   }
+   .Header .one{
+       display: inline;
+       font-family: cursive;
+       color: rgb(75, 133, 226);
+   }
+   .Header .two{
+       display: inline;
+       font-family: cursive;
+       color: rgb(221, 21, 171);
+   }
+   .Header .head{
+       margin-top: 3px;
+       color: rgb(2, 2, 43);
+       text-transform: uppercase;
+       font-family: monospace;
+       font-size: large;
+   }
+   .Header .content{
+       margin-top: 50px;
+       font-family: sans-serif;
+       text-transform: capitalize;
+       font-style: italic;
+       font-size: small;
+       color: rgb(68, 67, 67);
+   }
+   .Navbar{
+       background-color: rgb(113, 159, 226);
+       margin-top: 20px;
+   }
+   .Navbar ul{
+       list-style-type: none;
+       text-align: center;
+       padding: 5px;
+   }
+   .Navbar ul li{
+       display: inline;
+       padding: 5px;
+   }
+   .Navbar ul li a{
+       text-decoration: none;
+       color: white;
+       font-family: sans-serif;
+       text-transform: uppercase;
+       font-size: small;
+       padding: 0 10px;
+   }
+   .Navbar ul li a:hover{
+        color: rgb(123, 122, 122);
+    }
+    .a img{
+        margin:20px 0 40px;
+        width: 100%;
+    }
+    .a h3{
+    color: rgb(32, 32, 32);
+    font-family: sans-serif;
+    font-weight: 500;
+    padding: 20px 60px;
+    }
+    .a p{
+        font-family: sans-serif;
+        color: rgb(118, 116, 116);
+        line-height: 1.5;
+        padding: 20px 60px;
+    }
+    .b{
+        padding: 20px 60px; 
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .b .b1{
+        width: 40%;
+    }
+    .b .b2{
+        width: 40%;
+    }
+    .b h1{
+        color: rgb(32, 32, 32);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding: 20px 0;
+    }
+    .b h3{
+        color: rgb(32, 32, 32);
+    font-family: sans-serif;
+    font-weight: 600;
+    padding: 20px 0;
+    }
+    .b p{
+        font-family: sans-serif;
+        color: rgb(118, 116, 116);
+        line-height: 1.5;
+        padding: 20px 0px;
+    }
+    .b button{
+        padding: 15px;
+        background-color: rgba(247, 97, 97, 0.958);
+        border: none;
+        border-radius: 2px;
+        font-size: medium;
+    }
+    .b button a{
+        color: white;
+        text-decoration: none;
+    }
+    .b button a::after{
+        content: ">";
+        display: none;
+    }
+    .b button:hover a::after{
+        display: inline-block;
+        width: 35px;
+    }
+    .b button:hover{
+        background-color: rgba(247, 97, 97, 0.616);
+    }
+    iframe{
+        margin: 30px;
+        width: 100%;
+    }
+    .c{
+        margin: 30px 0;
+        background-color:  rgb(232, 235, 237);
+        padding: 30px;
+    }
+    .end{
+        margin: 40px 0px 60px;
+        background-color: rgb(239, 241, 243);
+        padding-bottom: 30px;
+    }
+    .end form{
+        background-color: white;
+        margin: 15px 70px 30px;
+        padding: 30px;
+    }
+    .end h1{
+        padding:60px 70px 30px;
+        font-family: sans-serif;
+        color: rgba(255, 0, 0, 0.616) ;
+        font-weight: 500;
+        font-size: x-large;
+    }
+    .end label{
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: medium;
+        line-height: 2;
+    }
+    .end input,textarea{
+        width: 100%;
+        height: auto;
+        padding: 7px;
+        border-radius: 3px;
+        border: 1px solid rgb(198, 194, 194);
+        box-shadow: 0px 0px 2px rgb(185, 184, 184);
+    }
+    .end img{
+        margin: 30px 70px;
+        width: 200px;
+    }
+    .Certifications{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .Certifications div{
+        padding: 15px;
+    }
+    .Certifications img{
+        width: 300px;
+        height: 100px;
+    }
+    .copyrights{
+        margin-top: 70px;
+        background-color: rgb(33, 32, 32);
+        color: white;
+        padding: 25px;
+        font-family: sans-serif;
+        line-height:1.5 ;
+        text-align: center;
+    }
+    @media screen and (max-width:1800px) and (min-width:1050px) {
+        .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+                display: none;
+        }
+    }
+    @media screen and (max-width:1050px) and (min-width:860px){
+        .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+            display: none;
+        }
+    }
+    @media screen and (max-width:860px) and (min-width:560px){
+        .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+            display: none;
+        }
+        .b .b1{
+            width: 80%;
+        }
+        .b .b2{
+            width: 80%;
+        }
+        .Certifications img{
+        width: 180px;
+        height: 90px;
+    }
+    }
+    @media screen and (max-width:560px) and (min-width:350px) {
+        .Navbar{
+        display: none;
+        }
+        .Navbar ul li{
+        display: block;
+        }
+        .dropbtn img{
+        padding-bottom:5px ;
+        }
+        .dropbtn:hover .Navbar{
+        display: inline-block;
+        position: relative;
+        left: -12px;
+        }
+        .b .b1{
+            width: 90%;
+        }
+        .b .b2{
+            width: 90%;
+        }
+        .Certifications img{
+        width: 100px;
+        height: 50px;
+    }
+    }
+</style>
+<body>
+    <div class="outline">
+        <div class="Header">
+            <h1 class="one">Dream </h1>
+            <h1 class="two">Light</h1>
+            <p class="head">Event Planner<p>
+            <p class="content">Letting you be a guest at your own event</p>
+        </div>
+        <div class="dropbtn" style="display: inline;">
+            <img style="width: 15px; height: 15px;float: left;" src="fas fa bar.jpg"> 
+          <div class="Navbar">
+            <ul>
+                <li><a href="Home.html">Home </a></li>
+                <li><a href="about.html">About </a></li>
+                <li><a href="service.html">Services </a></li>
+                <li><a href="review.html">Reviews </a></li>
+                <li><a href="contact.html">Contact </a></li>
+            </ul>
+          </div> <br><br><hr>
+        </div>
+        <div class="a">
+            <img src="wd.eve.webp" alt="">
+            <h3>CONSIDERING A PLANNER CAN BE CONFUSING BUT JUST KNOW WE CUSTOMIZE OUR PACKAGES TO FIT YOUR NEEDS AS EVERY COUPLE IS UNIQUE!!</h3>
+            <p>​​At Dream Light Events we want to help relieve some of your stress and guide you through the process of the entire wedding planning. With Dream Light Events you will know that a trustworthy coordinator can take the reins in keeping you on track, help you with design, vendors, etiquette, speech writing, budgets, rentals, contract reviews, timelines, floor-plans and even resolve last minute issues and help smooth out many 
+                family concerns that will arise throughout the process and then manage the entire day with grace and a smile. <br><br>
+                Your wedding should be unique for the two of you, so we get to know you and adjust our packages to fit what you need,
+                 this can be determined over a complimentary consultation.</p>
+        </div>
+        <div class="b">
+            <div class="b1">
+                <h1>FULL WEDDING PLANNING SERVICE</h1>
+                <p>You are engaged!! Don’t know where to start, or feeling overwhelmed and the last thing you have time for is learning to 
+                    become a professional wedding planner?  It’s okay with over 20 years of planning experience we can help! We’ll visit venues 
+                    together and catering tastings plus our team will book and manage all the vendor contracts, oversee and manage the budget, 
+                    and offer advice throughout the process, allowing you to be the bride and groom, but never stressed. This package is
+                     designed for couples that know their wedding isn’t the cookie cutter wedding and want a day that is customized just
+                      for the two of you. <br><br>
+                    Typical clientele has a wedding budget starting at $55,000.</p>  <br>
+                    <button><a href="https://www.wedmegood.com/vendors/all/wedding-venues/">Learn More</a></button>
+            </div>
+            <div class="b2">
+                <h1>WEDDING DAY SERVICES</h1>
+                <h3>Services start at $3,200</h3>
+                <p>You did it! The planning is done and you’re ready to walk down the aisle… and then it hits you and your family. Who’s going to “run” the event? There are a million little details and you don’t want to ask your guests or family to handle them! Let us step in and take care of everything so that you and your
+                     guests are free to relax and enjoy your event while you know we will execute your day exactly as you’ve planned.</p> <br>
+                     <button><a href="https://www.happywedding.app/blog/top-10-wedding-planners-in-india-with-prices/">Learn More</a></button>
+            </div>
+            <div class="iframe">
+            <iframe width="1500" height="600" src="https://www.youtube.com/embed/qUFC7j6Mcgc?si=3Hesz5B18NxqtAuH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="c">
+            <p>You need this team to make all aspects of your wedding life easier! This comes from an independent person who thought she had it handled. I was impressed from the team from the very first meeting- they handled a difficult guests at the wedding and everything in between with ease and grace. <br><br>
+
+                Help yourself out and hire them sooner than later! <br><br>
+                
+                J&G Stevens August 2023</p>
+        </div>
+        </div>
+        <div class="end">
+            <h1>LET'S START PLANNING!</h1>
+            <form>
+                <label>First Name*</label> <br>
+                 <input type="text">  <br>
+    
+                <label>Last Name*</label> <br>
+                <input type="text"> <br>
+    
+                <label>Email*</label> <br>
+                <input type="e-mail"> <br>
+    
+                <label>Phone Number*</label> <br>
+                <input type="number"> <br>
+    
+                <label>Event Date</label> <br>
+                <input type="date"> <br>
+    
+                <label>Venue Location</label> <br>
+                <input type="text"> <br>
+    
+                <label>Comments</label> <br>
+                <textarea cols="100%" rows="10"></textarea>
+    
+                <input type="submit" style="background-color: rgba(27, 157, 217, 0.896);width: 100%;font-size: medium; border: none; 
+                font-family: sans-serif; color: white; font-weight: 500;padding: 10px; margin: 5px 5px;text-align: center;">
+                <p style="color: blue; font-family: sans-serif; text-align: center;padding: 5px; font-size: x-small;">Powered by Event Temple</p>
+            </form>
+    
+        </div>
+        <div class="Certifications">
+        <div class="logo1"><img src="NACE-Logo.webp" ></div>
+        <div class="logo2"><img src="chamber-logo.webp" ></div>
+        <div class="logo3"><img src="men logo.jpg" ></div>
+        </div>
+        
+        <div class="copyrights">
+            <p>COPYRIGHT 2024 © DREAM LIGHT EVENTS </p>
+            <p>    TERMS OF SERVICE</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebration of Life</title>
+</head>
+<style>
+     * {
+       margin: 0;
+       padding: 0;
+   }
+   body{
+        padding: 0px 50px;
+    }
+    .outline{ 
+        border-left:  1px solid rgba(0, 0, 0, 0.248);
+        border-right:  1px solid rgba(0, 0, 0, 0.248);
+        box-shadow: 0px 0px 3px rgb(108, 107, 107);
+        height: max-content;
+    }
+   .Header{
+       text-align: center;
+       padding-top: 50px;
+   }
+   .Header .one{
+       display: inline;
+       font-family: cursive;
+       color: rgb(75, 133, 226);
+   }
+   .Header .two{
+       display: inline;
+       font-family: cursive;
+       color: rgb(221, 21, 171);
+   }
+   .Header .head{
+       margin-top: 3px;
+       color: rgb(2, 2, 43);
+       text-transform: uppercase;
+       font-family: monospace;
+       font-size: large;
+   }
+   .Header .content{
+       margin-top: 50px;
+       font-family: sans-serif;
+       text-transform: capitalize;
+       font-style: italic;
+       font-size: small;
+       color: rgb(68, 67, 67);
+   }
+   .Navbar{
+       background-color: rgb(113, 159, 226);
+       margin-top: 20px;
+   }
+   .Navbar ul{
+       list-style-type: none;
+       text-align: center;
+       padding: 5px;
+   }
+   .Navbar ul li{
+       display: inline;
+       padding: 5px;
+   }
+   .Navbar ul li a{
+       text-decoration: none;
+       color: white;
+       font-family: sans-serif;
+       text-transform: uppercase;
+       font-size: small;
+       padding: 0 10px;
+   }
+   .Navbar ul li a:hover{
+        color: rgb(123, 122, 122);
+    }
+    .end{
+        margin: 40px 0px 60px;
+        background-color: rgb(239, 241, 243);
+        padding-bottom: 30px;
+    }
+    .end form{
+        background-color: white;
+        margin: 15px 70px 30px;
+        padding: 30px;
+    }
+    .end h1{
+        padding:60px 70px 30px;
+        font-family: sans-serif;
+        color: rgba(255, 0, 0, 0.616) ;
+        font-weight: 500;
+        font-size: x-large;
+    }
+    .end label{
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: medium;
+        line-height: 2;
+    }
+    .end input,textarea{
+        width: 100%;
+        height: auto;
+        padding: 7px;
+        border-radius: 3px;
+        border: 1px solid rgb(198, 194, 194);
+        box-shadow: 0px 0px 2px rgb(185, 184, 184);
+    }
+    .end img{
+        margin: 30px 70px;
+        width: 200px;
+    }
+    .Certifications{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .Certifications div{
+        padding: 15px;
+    }
+    .Certifications img{
+        width: 300px;
+        height: 100px;
+    }
+    .copyrights{
+        margin-top: 70px;
+        background-color: rgb(33, 32, 32);
+        color: white;
+        padding: 25px;
+        font-family: sans-serif;
+        line-height:1.5 ;
+        text-align: center;
+    }
+    .i img{
+        width: 100%;
+        height: fit-content;
+        margin: 30px 0;
+    }
+    .a{
+        width: 40%;
+        margin: 20px 40px;
+    }
+    .b{
+        width: 40%;
+        margin: 20px 40px;
+    }
+    .a h1{
+        padding: 20px 0;
+        font-family: sans-serif;
+        color: rgb(44, 44, 44);
+    }
+        
+    .a p{
+        font-family: sans-serif;
+        line-height: 1.5;
+        color: rgb(48, 47, 47);  
+        padding-bottom: 25px;
+    }
+    .b h3,h1{
+        padding: 20px 0;
+        font-family: sans-serif;
+        color: rgb(44, 44, 44);
+    }
+    .b img{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+        
+    .b p,ul{
+        font-family: sans-serif;
+        line-height: 1.5;
+        color: rgb(48, 47, 47);  
+        padding-bottom: 10px;
+    }
+    .a2{
+        background-color:  rgb(239, 241, 243);
+        padding: 30px;
+    }
+    .m{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    @media screen and (max-width:1800px) and (min-width:950px) {
+        .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+                display: none;
+        }
+        
+    }
+    @media screen and (max-width:950px) and (min-width:870px) {
+        .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+                display: none;
+        }
+        .a,.b{
+            width: 80%;
+        }
+        
+    }
+    @media screen and (max-width:870px) and (min-width:580px){
+    .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+                display: none;
+        }    
+        .a,.b{
+            width: 80%;
+        }
+        .Certifications img{
+        width: 180px;
+        height: 90px;
+    }
+    }
+    @media screen and (max-width:580px) and (min-width:350px) {
+        .Navbar{
+        display: none;
+        }
+        .Navbar ul li{
+        display: block;
+        }
+        .dropbtn img{
+        padding-bottom:5px ;
+        }
+        .dropbtn:hover .Navbar{
+        display: inline-block;
+        position: relative;
+        left: -12px;
+        }
+        .a,.b{
+            width: 90%;
+        }
+        .Certifications img{
+        width: 100px;
+        height: 50px;
+    }
+    }
+</style>
+<body>
+    <div class="outline">
+        <div class="Header">
+            <h1 class="one">Dream </h1>
+            <h1 class="two">Light</h1>
+            <p class="head">Event Planner<p>
+            <p class="content">Letting you be a guest at your own event</p>
+        </div>
+        <div class="dropbtn" style="display: inline;">
+            <img style="width: 15px; height: 15px;float: left;" src="fas fa bar.jpg"> 
+          <div class="Navbar">
+            <ul>
+                <li><a href="Home.html">Home </a></li>
+                <li><a href="about.html">About </a></li>
+                <li><a href="service.html">Services </a></li>
+                <li><a href="review.html">Reviews </a></li>
+                <li><a href="contact.html">Contact </a></li>
+            </ul>
+          </div> <br><br><hr>
+        </div>
+        <div class="i">
+            <img src="celebration-of-life-services-soho63-.jpg" alt="">
+        </div>  
+        <div class="m">
+          <div class="a">
+            <div class="a1">
+                <h1>CELEBRATION OF LIFE SERVICES</h1>
+                <p>The loss of a loved one brings so many emotions. Honoring the fullness of their life is a priority for us as we assist
+                     you and your family in creating a personal and unique celebration.  By taking care of the logistics we help families 
+                     devote their energy and attention to each other and their emotional and spiritual needs. <br><br>
+
+                    Allow us to help you create a personalized celebration of their life by reflecting what their life meant,
+                     how they will be remembered, and ensure they will not be forgotten.</p>
+            </div>
+            <div class="a2">
+                <p>The team at Dream Light has helped with two memorials in our family over the years and both times they have done 
+                    an exceptional job.   Recently they helped with my mother’s service and family memorial.  They had staff at the service
+                     that handled moving all the items to the family memorial while we were at the grave site. This was such a great relief
+                      as it allowed us to walk into a warm and friendly home that had coffee on and all the items out and ready for the 
+                      family to gather. <br><br>
+
+                    <b>Perrault Family</b></p>
+            </div>
+          </div>
+          <div class="b">
+            <h1>CELEBRATION OF LIFE COORDINATORS</h1>
+            <img src="SandyRod.webp" alt="">
+            <p>Rod & Sandy are the team members specializing in Celebration of Life events.  They will bring empathy and 
+                compassion as they have been their themselves with family members and together, 
+                they will work with you to ease the stress and allow you to focus on sharing time with your loved ones.</p> <br><br><br>
+            <h3>MEMORIAL & RECEPTION PLANNING</h3>
+            <ul>
+                <li>Personal consultation to determine “Memorial Wishes”</li>
+                <li>Arrangement of memorial details (e.g. venue, decorations, catering, musicians)</li>
+                <li>On site overseeing of memorial reception from set up to clean up</li>
+                <li>Create a personalized memorial reception, interweaving personal touches that reflect the life of your loved one lost.</li>
+            </ul>
+          </div>
+        </div>
+          <div class="end">
+            <h1>REQUEST A CONSULTATION</h1>
+            <form>
+                <label>First Name*</label> <br>
+                 <input type="text">  <br>
+    
+                <label>Last Name*</label> <br>
+                <input type="text"> <br>
+    
+                <label>Email*</label> <br>
+                <input type="e-mail"> <br>
+    
+                <label>Phone Number*</label> <br>
+                <input type="number"> <br>
+    
+                <label>Event Date</label> <br>
+                <input type="date"> <br>
+    
+                <label>Venue Location</label> <br>
+                <input type="text"> <br>
+    
+                <label>Comments</label> <br>
+                <textarea cols="100%" rows="10"></textarea>
+    
+                <input type="submit" style="background-color: rgba(27, 157, 217, 0.896);width: 100%;font-size: medium; border: none; 
+                font-family: sans-serif; color: white; font-weight: 500;padding: 10px; margin: 5px 5px;text-align: center;">
+                <p style="color: blue; font-family: sans-serif; text-align: center;padding: 5px; font-size: x-small;">Powered by Event Temple</p>
+            </form>
+    
+        </div>
+        <div class="Certifications">
+        <div class="logo1"><img src="NACE-Logo.webp" ></div>
+        <div class="logo2"><img src="chamber-logo.webp" ></div>
+        <div class="logo3"><img src="men logo.jpg" ></div>
+        </div>
+        
+        <div class="copyrights">
+            <p>COPYRIGHT 2024 © DREAM LIGHT EVENTS </p>
+            <p>    TERMS OF SERVICE</p>
+        </div>
+</div>    
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+</head>
+<style>
+    * {
+       margin: 0;
+       padding: 0;
+   }
+   body{
+        padding: 0px 50px;
+    }
+    .outline{ 
+        border-left:  1px solid rgba(0, 0, 0, 0.248);
+        border-right:  1px solid rgba(0, 0, 0, 0.248);
+        box-shadow: 0px 0px 3px rgb(108, 107, 107);
+        height: max-content;
+    }
+   .Header{
+       text-align: center;
+       padding-top: 50px;
+   }
+   .Header .one{
+       display: inline;
+       font-family: cursive;
+       color: rgb(75, 133, 226);
+   }
+   .Header .two{
+       display: inline;
+       font-family: cursive;
+       color: rgb(221, 21, 171);
+   }
+   .Header .head{
+       margin-top: 3px;
+       color: rgb(2, 2, 43);
+       text-transform: uppercase;
+       font-family: monospace;
+       font-size: large;
+   }
+   .Header .content{
+       margin-top: 50px;
+       font-family: sans-serif;
+       text-transform: capitalize;
+       font-style: italic;
+       font-size: small;
+       color: rgb(68, 67, 67);
+   }
+   .Navbar{
+       background-color: rgb(113, 159, 226);
+       margin-top: 20px;
+   }
+   .Navbar ul{
+       list-style-type: none;
+       text-align: center;
+       padding: 5px;
+   }
+   .Navbar ul li{
+       display: inline;
+       padding: 5px;
+   }
+   .Navbar ul li a{
+       text-decoration: none;
+       color: white;
+       font-family: sans-serif;
+       text-transform: uppercase;
+       font-size: small;
+       padding: 0 10px;
+   }
+   .Navbar ul li a:hover{
+        color: rgb(123, 122, 122);
+    }
+   .whole{
+    margin: 80px 60px;
+   }
+   .plan{
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: wrap;
+   }
+
+    .plan .div{
+    width: 300px;
+   }
+   .plan img{
+    width: 300px;
+    height: 200px;
+    margin-top: 15px;
+   }
+   .plan h2 a{
+    text-decoration: none;
+    color: rgb(32, 32, 32);
+    font-weight: lighter;
+   }
+   .plan h2 a:hover{
+    color:  rgb(92, 90, 90);
+   }
+   .plan h2{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin: 10px 0;
+   }
+   .plan p{
+    font-family: sans-serif;
+    color: var(--pg-color);
+    line-height: 1.5;
+   }
+   .what h3{
+    margin: 50px 0 40px ;
+    color: rgb(32, 32, 32);
+    font-family: sans-serif;
+    font-weight: 500;
+   }
+   .what p{
+    font-family: sans-serif;
+    color: var(--pg-color);
+    line-height: 1.5;
+   }
+   .vs{
+    margin-bottom: 30px;
+   }
+   .vs h4{
+    margin: 50px 0 40px ;
+    color: rgb(32, 32, 32);
+    font-family: sans-serif;
+    font-weight: 500;
+   }
+   .vs h2{
+    margin: 50px 0 40px ;
+    color: rgb(32, 32, 32);
+    font-family: sans-serif;
+    font-weight: 500;
+   }
+   .vs h3{
+    margin: 30px 0 20px ;
+    color: rgb(32, 32, 32);
+    font-family: sans-serif;
+    font-weight: 500;
+   }
+   .vs h5{
+    margin: 30px 0 20px ;
+    color: rgb(55, 54, 54);
+    font-family: sans-serif;
+    font-weight: 900;
+   }
+   .vs p{
+    font-family: sans-serif;
+    color: var(--pg-color);
+    line-height: 1.5;
+   }
+   .vs li{
+    font-family: sans-serif;
+    color: var(--pg-color);
+    line-height: 1.5;
+    margin: 0 15px;
+   }
+
+   :root{
+    --pg-color:  rgb(95, 95, 95);
+    --h-color:rgb(32, 32, 32);
+   }
+   .end{
+        margin: 40px 0px 60px;
+        background-color: rgb(239, 241, 243);
+        padding-bottom: 30px;
+    }
+    .end form{
+        background-color: white;
+        margin: 15px 70px 30px;
+        padding: 30px;
+    }
+    .end h1{
+        padding:60px 70px 30px;
+        font-family: sans-serif;
+        color: rgba(255, 0, 0, 0.616) ;
+        font-weight: 500;
+        font-size: x-large;
+    }
+    .end label{
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: medium;
+        line-height: 2;
+    }
+    .end input,textarea{
+        width: 100%;
+        height: auto;
+        padding: 7px;
+        border-radius: 3px;
+        border: 1px solid rgb(198, 194, 194);
+        box-shadow: 0px 0px 2px rgb(185, 184, 184);
+    }
+    .end img{
+        margin: 30px 70px;
+        width: 200px;
+    }
+    .Certifications{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .Certifications div{
+        padding: 15px;
+    }
+    .Certifications img{
+        width: 300px;
+        height: 100px;
+    }
+    .copyrights{
+        margin-top: 70px;
+        background-color: rgb(33, 32, 32);
+        color: white;
+        padding: 25px;
+        font-family: sans-serif;
+        line-height:1.5 ;
+        text-align: center;
+    }
+    @media screen and (max-width:1800px) and (min-width:570px) {
+        .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+                display: none;
+        }
+    }
+    @media screen and (max-width:570px) and (min-width:350px) {
+        .Navbar{
+        display: none;
+        }
+        .Navbar ul li{
+        display: block;
+        }
+        .dropbtn img{
+        padding-bottom:5px ;
+        }
+        .dropbtn:hover .Navbar{
+        display: inline-block;
+        position: relative;
+        left: -12px;
+        }
+        .plan div{
+            text-align: center;
+            width: 80%;
+        }
+        .plan img{
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        .Certifications img{
+        width: 100px;
+        height: 50px;
+    }
+    }
+   
+</style>
+<body>
+    <div class="outline">
+        <div class="Header">
+            <h1 class="one">Dream </h1>
+            <h1 class="two">Light</h1>
+            <p class="head">Event Planner<p>
+            <p class="content">Letting you be a guest at your own event</p>
+        </div>
+        <div class="dropbtn" style="display: inline;">
+            <img style="width: 15px; height: 15px;float: left;" src="fas fa bar.jpg"> 
+          <div class="Navbar">
+            <ul>
+                <li><a href="Home.html">Home </a></li>
+                <li><a href="about.html">About </a></li>
+                <li><a href="service.html">Services </a></li>
+                <li><a href="review.html">Reviews </a></li>
+                <li><a href="contact.html">Contact </a></li>
+            </ul>
+          </div> <br><br><hr>
+        </div>
+    <div class="whole">
+    <div class="plan">
+
+        <div class="wedding">
+            <img src="Wedding_Planning_3.jpg">
+            <h2><a href="Wedding events.html">Weddings</a></h2>
+            <p>Let us step in and take care of <br> everything so that you and your <br>guests are free to relax and enjoy <br>your wedding day.</p>
+        </div>
+
+        <div class="event">
+            <img src="event-planning.jpeg">
+            <h2><a href="c event.html">Corporate Event</a></h2>
+            <p>Look to us to plan your next business <br> meeting, client party, grand opening,<br> or corporate conference.</p>
+        </div>
+
+        <div class="life">
+            <img src="celebration-of-life-services-soho63-.jpg">
+            <h2><a href="Clife.html">Celebration of life</a></h2>
+            <p>Honor the fullness of your loved one’s <br> life through a personal and unique <br>celebration.</p>
+        </div> 
+        </div>
+
+        <div class="what">
+            <h3>WHAT MAKES DREAM LIGHT EVENTS DIFFERENT</h3>
+            <p>We are not an “event designer” or a “bridal consultant” – we will never tell you what your event should look like/be like/cost, unless of course you ask. We work with clients to help them create the event that they want, with as little stress as possible. This means that we will probably encourage you to simplify 
+            things so on the day of the event you can put your stress aside and enjoy your event, be it a wedding, family reunion or business event.</p>
+        </div>
+        <div class="vs">
+            <h4>EVENT COORDINATOR VS. VENUE COORDINATOR</h4>
+            <p>A venue coordinator/catering manager is there to represent the venue and vendor, not the people putting on the event. 
+                Here is what an event coordinator (Dream Light Events) will do that the venue or catering manger will not do:</p>
+            <h3>Transportation nightmare:</h3>
+            <p>The shuttle may forget to stop at one of the hotels and leave guests behind before the event is about to start… so now what?</p>
+            <h3>Stranded at the altar:</h3>
+            <p>The couple may forget to designate someone to cue the musicians to know when the wedding party and bride should walk down the aisle.
+                 The groom and guests wait while nothing happens, but the same song plays over and over again.</p>
+            <h3>Blank screen: </h3>
+            <p>The presenter has nothing on the screen to present to 300 business people and he needs the video, 
+                but the venue coordinator has left for lunch.</p>
+            <h3>Family Feud: </h3>
+            <p>Family members, who are helping run the day, may have a different vision than the host. With no third party mediator offering an unbiased opinion,
+         the disagreements may escalate leaving the host less than enthused about their day.</p>
+            <h3>Communication Meltdown: </h3>
+            <p>The bar tab may exceed the allotted budget, but no one checks in with the bartender so drinks 
+            are continuing to be served leaving the host with an unexpected bill at the end of the night.</p>
+
+            <h2>EXCLUSIVE VENUE DISCOUNTS</h2>
+            <p>While we work at many venues, we end up returning to some of our favorites over and over. One benefit of using Dream Light Events is exclusive
+         discounts to our favorite venues. Ask how you can save up to $500 when working with one of our partners.</p>
+
+         <h5>Tacoma Area:</h5>
+         <ul>
+            <li>SilverCloud Hotel Pt. Ruston</li>
+            <li>Thornewood Castle</li>
+            <li>Tin Can Alley</li>
+         </ul>
+         <h5>Central Washington Area:</h5>
+         <ul>
+            <li>Suncadia</li>
+            <li>Trinity Garden Lavender Farm</li>
+            <li>Beaumont Winery</li>
+            <li>Vista del Rio</li>
+         </ul>
+
+        </div>
+        
+    </div>
+    <div class="end">
+        <h1>LET'S START PLANNING!</h1>
+        <form>
+            <label>First Name*</label> <br>
+             <input type="text">  <br>
+
+            <label>Last Name*</label> <br>
+            <input type="text"> <br>
+
+            <label>Email*</label> <br>
+            <input type="e-mail"> <br>
+
+            <label>Phone Number*</label> <br>
+            <input type="number"> <br>
+
+            <label>Event Date</label> <br>
+            <input type="date"> <br>
+
+            <label>Venue Location</label> <br>
+            <input type="text"> <br>
+
+            <label>Comments</label> <br>
+            <textarea cols="100%" rows="10"></textarea>
+
+            <input type="submit" style="background-color: rgba(27, 157, 217, 0.896);width: 100%;font-size: medium; border: none; 
+            font-family: sans-serif; color: white; font-weight: 500;padding: 10px; margin: 5px 5px;text-align: center;">
+            <p style="color: blue; font-family: sans-serif; text-align: center;padding: 5px; font-size: x-small;">Powered by Event Temple</p>
+        </form>
+
+    </div>
+    <div class="Certifications">
+    <div class="logo1"><img src="NACE-Logo.webp" ></div>
+    <div class="logo2"><img src="chamber-logo.webp" ></div>
+    <div class="logo3"><img src="men logo.jpg" ></div>
+    </div>
+    
+    <div class="copyrights">
+        <p>COPYRIGHT 2024 © DREAM LIGHT EVENTS </p>
+        <p>    TERMS OF SERVICE</p>
+    </div>
+    </div>
+
+</body>
+</html>

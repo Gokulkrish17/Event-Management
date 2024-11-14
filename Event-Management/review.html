@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Reviews</title>
+</head>
+<style>
+      * {
+        margin: 0;
+        padding: 0;
+    }
+    :root{
+    --pg-color:  rgb(95, 95, 95);
+   }
+    body{
+        padding: 0px 50px;
+    }
+    .outline{ 
+        border-left:  1px solid rgba(0, 0, 0, 0.248);
+        border-right:  1px solid rgba(0, 0, 0, 0.248);
+        box-shadow: 0px 0px 3px rgb(108, 107, 107);
+        height: max-content;
+    }
+    .Header{
+        text-align: center;
+        padding-top: 50px;
+    }
+    .Header .one{
+        display: inline;
+        font-family: cursive;
+        color: rgb(75, 133, 226);
+    }
+    .Header .two{
+        display: inline;
+        font-family: cursive;
+        color: rgb(221, 21, 171);
+    }
+    .Header .head{
+        margin-top: 3px;
+        color: rgb(2, 2, 43);
+        text-transform: uppercase;
+        font-family: monospace;
+        font-size: large;
+    }
+    .Header .content{
+        margin-top: 50px;
+        font-family: sans-serif;
+        text-transform: capitalize;
+        font-style: italic;
+        font-size: small;
+        color: rgb(68, 67, 67);
+    }
+    .Navbar{
+        background-color: rgb(113, 159, 226);
+        margin-top: 20px;
+    }
+    .Navbar ul{
+        list-style-type: none;
+        text-align: center;
+        padding: 5px;
+    }
+    .Navbar ul li{
+        display: inline;
+        padding: 5px;
+    }
+    .Navbar ul li a{
+        text-decoration: none;
+        color: white;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-size: small;
+        padding: 0 10px;
+    }
+    .Navbar ul li a:hover{
+        color: rgb(123, 122, 122);
+    }
+    .flex{
+        margin: 20px 60px;
+    }
+    .wed1{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 30px 0;
+        padding: 20px 0;
+    }
+    .wed1 img{
+        width: 40%;
+        height: auto; 
+    }
+    .wed1 p{
+        width: 40%;
+        color: var(--pg-color);
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+    }
+    .wed2{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 30px 0;
+        padding: 20px 0;
+    }
+    .wed2 img{
+        width: 40%;
+        height: auto;
+    }
+    .wed2 p{
+        width: 40%;
+        color: var(--pg-color);
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+    }
+    .wed3{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 30px 0;
+        padding: 20px 0;
+    }
+    .wed3 img{
+        width: 40%;
+        height: auto;
+    }
+    .wed3 p{
+        width: 40%;
+        color: var(--pg-color);
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+    }
+    .wed4{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 30px 0;
+        padding: 20px 0;
+    }
+    .wed4 img{
+        width: 40%;
+        height: auto;
+    }
+    .wed4 p{
+        width: 40%;
+        color: var(--pg-color);
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+    }
+    .wed5{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 30px 0;
+        padding: 20px 0;
+    }
+    .wed5 img{
+        width: 40%;
+        height: auto;
+    }
+    .wed5 p{
+        width: 40%;
+        color: var(--pg-color);
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+    }
+    .wed6{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 30px 0;
+        padding: 20px 0;
+    }
+    .wed6 img{
+        width: 40%;
+        height: auto;
+    }
+    .wed6 p{
+        width: 40%;
+        color: var(--pg-color);
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+    }
+    .wed7{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 30px 0;
+        padding: 20px 0;
+    }
+    .wed7 img{
+        width: 40%;
+        height: auto;
+    }
+    .wed7 p{
+        width: 40%;
+        color: var(--pg-color);
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+    }
+    .wed8{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 30px 0;
+        padding: 20px 0;
+    }
+    .wed8 img{
+        width: 40%;
+        height: auto;
+    }
+    .wed8 p{
+        width: 40%;
+        color: var(--pg-color);
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+    }
+    .wed9{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 30px 0;
+        padding: 20px 0;
+    }
+    .wed9 img{
+        width: 40%;
+        height: auto;
+    }
+    .wed9 p{
+        width: 40%;
+        color: var(--pg-color);
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+    }
+    .wed10{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 30px 0;
+        padding: 20px 0;
+    }
+    .wed10 img{
+        width: 40%;
+        height: auto;
+    }
+    .wed10 p{
+        width: 40%;
+        color: var(--pg-color);
+        margin-top: 5px;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        line-height: 1.5;
+    }
+    .end{
+        margin: 40px 0px 60px;
+        background-color: rgb(239, 241, 243);
+    }
+    .end form{
+        background-color: white;
+        margin: 15px 70px 30px;
+        padding: 30px;
+    }
+    .end h1{
+        padding:60px 70px 30px;
+        font-family: sans-serif;
+        color: rgba(255, 0, 0, 0.616) ;
+        font-weight: 500;
+        font-size: x-large;
+    }
+    .end label{
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: medium;
+        line-height: 2;
+    }
+    .end input,textarea{
+        width: 100%;
+        height: auto;
+        padding: 7px;
+        border-radius: 3px;
+        border: 1px solid rgb(198, 194, 194);
+        box-shadow: 0px 0px 2px rgb(185, 184, 184);
+    }
+    .end img{
+        margin: 30px 70px;
+        width: 200px;
+    }
+    .final{
+        text-align: center;
+    }
+    .Certifications{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .Certifications div{
+        padding: 15px;
+    }
+    .Certifications img{
+        width: 300px;
+        height: 100px;
+    }
+    .copyrights{
+        margin-top: 70px;
+        background-color: rgb(33, 32, 32);
+        color: white;
+        padding: 25px;
+        font-family: sans-serif;
+        line-height:1.5 ;
+        text-align: center;
+    }
+    @media screen and (max-width:1800px) and (min-width:1050px){
+        .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+            display: none;
+        }
+        .flex div img{
+        width: 40%;
+        height: auto; 
+        animation-name: ex;
+        animation-duration: 10s;
+    }
+    @keyframes ex {
+        0%{
+            width: 0;
+            height: 0;
+        }
+        25%{
+            width: 40%;
+            height: auto;
+            animation-timing-function: ease;
+        }
+        100%{
+            width: 40%;
+            height: auto;
+        }
+    }
+    }
+    @media screen and (max-width:1050px) and (min-width:860px){
+        .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+            display: none;
+        }
+    }
+    @media screen and (max-width:860px) and (min-width:560px){
+        .dropbtn>br,hr{
+            display: none;
+        }
+        .dropbtn img{
+            display: none;
+        }
+        .flex div img{
+            width: 90%;
+            height: auto;
+        }
+        .flex div p{
+            width: 90%;
+        }
+        .Certifications img{
+        width: 180px;
+        height: 90px;
+    }
+    }
+    @media screen and (max-width:560px) and (min-width:350px) {
+        .Navbar{
+        display: none;
+        }
+        .Navbar ul li{
+        display: block;
+        }
+        .dropbtn img{
+        padding-bottom:5px ;
+        }
+        .dropbtn:hover .Navbar{
+        display: inline-block;
+        position: relative;
+        left: -12px;
+        }
+        .flex div img{
+            width: 90%;
+            height: auto;
+        }
+        .flex div p{
+            width: 90%;
+        }
+        .Certifications img{
+        width: 100px;
+        height: 50px;
+    }
+    }
+
+</style>
+<body>
+    <div class="outline">
+
+        <div class="Header">
+            <h1 class="one">Dream </h1>
+            <h1 class="two">Light</h1>
+            <p class="head">Event Planner<p>
+            <p class="content">Letting you be a guest at your own event</p>
+        </div>
+        <div class="dropbtn" style="display: inline;">
+            <img style="width: 15px; height: 15px;float: left;" src="fas fa bar.jpg"> 
+        <div class="Navbar">
+            <ul>
+                <li><a href="Home.html">Home </a></li>
+                <li><a href="about.html">About </a></li>
+                <li><a href="service.html">Services </a></li>
+                <li><a href="review.html">Reviews </a></li>
+                <li><a href="contact.html">Contact </a></li>
+            </ul> 
+        </div><br><br><hr>
+        </div> 
+        <div class="flex">
+            <div class="wed1">
+                <p>Dream Light Events was invaluable to making our special day perfect. 
+                    Angela and Cindy went above and beyond in making sure everything was thought of and that everything was executed smoothly. 
+                    It’s very apparent that over the years, Angela has gotten her process absolutely dialed in. She doesn’t miss a single detail
+                     and she anticipated every hiccup far in advance. Experience, competence,  confidence, and preparedness for days! It was
+                     comforting to be in such good hands during such a stressful day. My wife and I can’t say enough positive things
+                      about our experience!!! <br><br><br>
+
+                    Becca & Christian <br><br>
+                    Bride/Groom, July 2022</p>
+                <img src="wed1.webp">
+            </div>
+            <div class="wed2">
+                <img src="wed2.webp">
+                <p>Dream Light Events made our day amazing!  My wife and I both had busy schedules during the planning of our wedding, 
+                    and they made the whole process so much easier. We did not have to worry about talking directly to the different vendors
+                     (caterer, florist, DJ, etc.). Angela and Stacy were very flexible. When we didn’t like the photographers they suggested,
+                      they found another that we loved and adjusted so we could stay within our budget. Angela and her team gave us a lot 
+                      of guidance for what exactly we were going to do and when to do it. With them you never have to worry if a small detail 
+                      would be missed. It really made the stress of wedding planning go away. I would recommend that everyone hires Angela and
+                       her team! <br><br><br>
+
+                    Rowyn & Nathan W <br><br>
+                    Bride/Groom, December 2022</p>
+            </div>
+            <div class="wed3">
+                  <p>My wedding was the most perfect day of my life, and it wouldn’t have happened without Dream Light. They helped me 
+                    with every detail of my wedding, and on the day-of, they made sure I enjoyed every minute without worry. My wedding was
+                     seamless, beautiful, and it was all thanks to them! I will be referring them to my friends when they are ready to tie 
+                     the knot! <br><br><br>
+
+                    Maganda & Ross C <br><br>
+                    Bride/Groom, January 2023</p>
+                  <img src="wed3.webp" alt="">
+            </div>
+            <div class="wed4">
+                <img src="wed4.webp" alt="">
+                <p>I couldn’t have asked for a better day. Angela and Stacy set up my entire wedding, coordinated all of 
+                    the bridal party and guests, and even tore down my wedding.  I did not have to lift a finger or stress the entire day. 
+                    They were absolutely fantastic to work with and met all of my wants and desires. They kept in contact throughout the 
+                    entire process.  I highly recommend this business to anyone looking to get married. <br><br><br>
+
+                    Roslyn & Justin <br><br>
+                    Bride/Groom, February 2023</p>
+            </div>
+            <div class="wed5">
+                <p>She listens, she respects our vision and ideas, she wrangles anyone who needs wrangling, 
+                    she offers amazing and genuine emotional support, she’s fun, and she really knows how to get her ducks in a row. 
+                    She has experience and she has lots of great connections. Timing was awesome and dang she is organized and thorough.
+                     Unless your wedding involves a drive-through chapel in Vegas, hire a wedding planner or at least a wedding coordinator. 
+                     But more importantly hire Angela and her team. And come to think of it even if you had a drive-through chapel in Vegas
+                      you should still hire Angela because that would be a lot of fun and she’d make sure your Elvis impersonator had a
+                       sufficient amount of sequins. <br><br><br>
+
+                    Kristiana & Andrew <br><br>
+                    Bride/Groom, March 2023</p>
+                <img src="wed5.webp">
+            </div>
+            <div class="wed6">
+                <img src="wed6.webp" alt="">
+                <p>Dream Light Events saved us money, stress, time and most of all gave us peace of mind! No blogs or articles I found included hiring a wedding planner. Funny thing is, I’m positive that we could not have had the beautiful wedding we did, and still come in under the budget we set, without Angela’s help.
+                    Angela managed to find us the best venue for our needs and came up with a ceremony and reception schedule that allowed us to celebrate with both family and friends, while still making everything feel intimate. She was there every step of the way, from finding vendors, coming up with decoration and style ideas, and getting a wedding dress that made me feel like a million bucks (without spending a million bucks) to helping create our menu, keeping us on track with our timeline activities and reminding us that everything was not only going to be okay, but was going to be great. I was so grateful to be able to call her when I was stressed or anxious, to be able to ask her about all of my “supposed to’s” and have her confirm what I did and didn’t need to worry about,
+                     and to trust that she would help make my day everything I hoped for. Last but not least, day of coordination was a must for us.
+                    Angela and the Dream Light Events staff made everything go so smoothly from our ceremony through our brunch, into our evening party reception, that we were truly able to be our own guests. I can’t thank them enough for the wonderful memories I have of one of the least stressful, most beautiful and happy days of my life.
+                    If you’re getting married, you owe it to yourself to let Dream Light work their magic for you! <br><br><br>
+                    
+                    Mat & Katrina <br><br>
+                    Bride/Groom, April 2023</p>
+            </div>
+            <div class="wed7">
+                <p>Being new to the area, I saved so much time and money working with Angela at Dream Light Events. She was able to make fabulous recommendations for vendors that I NEVER would have found without her help. Angela was easy to get a hold of, and very organized and responsive.
+
+                    If I had only one statement to make about the service I received from Dream Light Events, it is that I feel like Angela gave me the most spectacular event, that turned out even more beautiful than I imagined, while continually being respectful of our budget.
+                    
+                    Honestly, weddings are so much work. And we (most of us) only get married once in a lifetime. Spend the money and hire an event planner who has done this many times, or hate your life for the duration of your engagement. <br><br><br>
+                    
+                    Bryce & Laura <br><br>
+                    Bride/Groom, May 2023</p>
+                <img src="wed7.webp" alt="">
+            </div>
+
+            <div class="wed8">
+                <img src="wed8.webp" alt="">
+                <p>If you need any amazing wedding done or any amazing occasion done!! This is the woman to call … She organized 
+                    our wedding and did a wonderful job! <br><br><br>
+                    Rachel and Mike Kummerfeldt <br><br>
+                    Bride/Groom, September 2023</p>
+            </div>
+            <div class="wed9">
+                <p>Angela was a Godsend!! I met Angela at the Tacoma wedding expo and was immediately impressed with her knowledge and organization ideas. She gave me some post-its so I could tag all the vendor materials to remember who I loved. Of course I put one on Angela’s brochure!
+                    Fast forward 6 months… I initially hired a friend of a friend to do my day of coordinating. I found myself telling her what to do and then stressing out that I’d have to do the same thing on my wedding day. I didn’t need that stress! I reached out to Angela in a panic 3 months before the wedding, hoping and praying she was still available for my wedding date. Thank God she was!! I met with her and was immediately put at ease with her knowledge and experience! Everything I worried over she said, “ Don’t worry! You have me now!”. I booked her that day and never looked back!
+                    Angela doesn’t do “day of coordinating”. She does “month of coordinating” and boy, did I get my money worth! She was always available via text or email, she sent me reminders (even after the wedding!!), gave me vendor names, and so much more!! Honestly, she is worth wayyyyy more than what she charges. Thank you Angela for making my day perfect. You kept us on time (which is hard for me) and I never even had to worry about anything the whole day!! You even found my wedding shoes that got lost in the shuffle with all the decor (which still, to this day I don’t know where they were!). I probably would have gone shoe-less without you. Thank you so much, Angela. We will be forever grateful!!!
+                    Brandon & Rachel  <br><br><br>
+                    Bride/Groom, December 2023</p> <br><br>
+                <img src="wed9.webp" alt="">
+            </div>
+            <div class="wed10">
+                 <img src="wed10.webp" alt="">
+                 <p>Angela was a great resource, and I would like to sing her praises. Leading up to our wedding day she made
+                     herself available at any given moment, text, email, phone calls, she responded to every question or concern within the hour. 
+                     We were completely hands off for this last week before the wedding and it made the process so much less stressful.
+                      On the big day she ran it like a Swiss watch. Everything ran seamlessly, period. Our expectations were high, and they 
+                      were blown out of the water. Thank you a million times over Angela. We couldn’t have done it without you. <br><br><br>
+                    Cody & Elora Binnie <br><br>
+                    Bride/Groom, January 2024</p>
+            </div>
+
+             </div>
+        <div class="end">
+            <h1>LET'S START PLANNING!</h1>
+            <form>
+                <label>First Name*</label> <br>
+                 <input type="text">  <br>
+    
+                <label>Last Name*</label> <br>
+                <input type="text"> <br>
+    
+                <label>Email*</label> <br>
+                <input type="e-mail"> <br>
+    
+                <label>Phone Number*</label> <br>
+                <input type="number"> <br>
+    
+                <label>Event Date</label> <br>
+                <input type="date"> <br>
+    
+                <label>Venue Location</label> <br>
+                <input type="text"> <br>
+    
+                <label>Comments</label> <br>
+                <textarea cols="100%" rows="10"></textarea>
+    
+                <input type="submit" style="background-color: rgba(27, 157, 217, 0.896);width: 100%;font-size: medium; border: none; 
+                font-family: sans-serif; color: white; font-weight: 500;padding: 10px; margin: 5px 5px;text-align: center;">
+                <p style="color: blue; font-family: sans-serif; text-align: center;padding: 5px; font-size: x-small;">Powered by Event Temple</p>
+            </form>
+            <div class="final">
+            <img src="Women-Owned.webp" alt="">
+        </div>
+        </div>
+        <div class="Certifications">
+        <div class="logo1"><img src="NACE-Logo.webp" ></div>
+        <div class="logo2"><img src="chamber-logo.webp" ></div>
+        <div class="logo3"><img src="men logo.jpg" ></div>
+        </div>
+        
+        <div class="copyrights">
+            <p>COPYRIGHT 2024 © DREAM LIGHT EVENTS </p>
+            <p>    TERMS OF SERVICE</p>
+        </div>
+        </div>
+</body>
+</html>

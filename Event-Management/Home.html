@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamLight Planner-Home</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        padding: 0px 50px;
+    }
+    .outline{ 
+        border-left:  1px solid rgba(0, 0, 0, 0.248);
+        border-right:  1px solid rgba(0, 0, 0, 0.248);
+        box-shadow: 0px 0px 3px rgb(108, 107, 107);
+        height: max-content;
+    }
+    .Header{
+        text-align: center;
+        padding-top: 50px;
+    }
+    .Header .one{
+        display: inline;
+        font-family: cursive;
+        color: rgb(75, 133, 226);
+    }
+    .Header .two{
+        display: inline;
+        font-family: cursive;
+        color: rgb(221, 21, 171);
+    }
+    .Header .head{
+        margin-top: 3px;
+        color: rgb(2, 2, 43);
+        text-transform: uppercase;
+        font-family: monospace;
+        font-size: large;
+    }
+    .Header .content{
+        margin-top: 50px;
+        font-family: sans-serif;
+        text-transform: capitalize;
+        font-style: italic;
+        font-size: small;
+        color: rgb(68, 67, 67);
+    }
+    .Navbar{
+        background-color: rgb(113, 159, 226);
+        margin-top: 20px;
+    }
+    .Navbar ul{
+        list-style-type: none;
+        text-align: center;
+        padding: 5px;
+    }
+    .Navbar ul li{
+        display: inline;
+        padding: 5px;
+    }
+    .Navbar ul li a{
+        text-decoration: none;
+        color: white;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-size: small;
+        padding: 0 10px;
+    }
+    .Navbar ul li a:hover{
+         color: rgb(123, 122, 122);  
+    }
+    .Image{
+        background-image: url("event-planning.jpeg");
+        display: flex;
+        justify-content: center;
+        /* margin-bottom: 50px; */
+    }
+    .Image .text{
+        opacity: 0.91;
+        height: 300px;
+        width: 800px;
+        background-color: white;
+        margin: 50px ;
+        text-align: center;
+    }
+    .Image .text .topic{
+        padding: 20px;
+        text-transform: uppercase;
+        font-family: sans-serif;
+    }
+    .Image .text .detail{
+        padding: 20px;
+        font-family: sans-serif;
+        font-size: medium;
+    }
+    .events{
+         display: flex;
+         flex-wrap: wrap;
+         background-color: rgb(239, 241, 243);
+         padding: 50px;
+         justify-content: center;
+    }
+    .events h2{
+        text-align: center;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 500;
+        padding: 20px 0;
+    }
+    .events .wed {
+        padding: 30px;
+    }
+    .events .pb {
+        padding: 30px;
+    }
+    .events img{
+        width: 500px;
+        height: 333px;
+    }
+    .latestp{
+        margin: 80px 40px 40px;
+        padding: 30px;
+    }
+    .latestp h1{
+        color: rgb(53, 52, 52);
+        padding: 20px 0;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 600;
+    }
+    .latestp img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .latestp h2 a{
+        text-decoration: none;
+        color: rgb(48, 47, 47);
+        text-transform: uppercase;
+        font-family: sans-serif ;
+        font-weight: 600;
+        font-size: large;
+    }
+    .latestp p{
+        margin: 20px 0 0;
+        font-family: sans-serif;
+        color: rgb(118, 116, 116);
+    }
+    .latestp h2 a:hover{
+        color: rgb(92, 90, 90);
+    }
+    .post{
+        margin: 10px 40px 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .post .post1{
+        width: 400px;
+        height: fit-content;
+        border: 1px solid rgb(160, 155, 155);
+        margin-bottom: 10px;
+    }
+    .post .post1 h3 a{
+        margin: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: small;
+        color: rgb(48, 47, 47); 
+    }
+    .post .post1 p{
+        margin: 10px;
+        font-family: sans-serif;
+        color: rgb(118, 116, 116);
+        font-size: small;
+        line-height: 1.5;
+    }
+    .post .post2{
+        width: 400px;
+        height: fit-content;
+        border: 1px solid rgb(160, 155, 155);
+        margin-bottom: 10px;
+    }
+    .post .post2 h3 a{
+        margin: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: small;
+        color: rgb(48, 47, 47); 
+    }
+    .post .post2 p{
+        margin: 10px;
+        font-family: sans-serif;
+        color: rgb(118, 116, 116);
+        font-size: small;
+        line-height: 1.5;
+    }
+    .post .post3{
+        width: 400px;
+        height: fit-content;
+        border: 1px solid rgb(160, 155, 155);
+        margin-bottom: 10px;
+    }
+    .post .post3 h3 a{
+        
+        margin: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: small;
+        color: rgb(48, 47, 47); 
+    }
+    .post .post3 p{
+        margin: 10px;
+        font-family: sans-serif;
+        color: rgb(118, 116, 116);
+        font-size: small;
+        line-height: 1.5;
+    }
+    .post .post1 a:hover{
+        color: rgb(92, 90, 90);
+    }
+    .post .post2 a:hover{
+        color: rgb(92, 90, 90);
+    }
+    .post .post3 a:hover{
+        color: rgb(92, 90, 90);
+    }
+    .end{
+        margin: 40px 0px 60px;
+        background-color: rgb(239, 241, 243);
+    }
+    .end form{
+        background-color: white;
+        margin: 15px 70px 30px;
+        padding: 30px;
+    }
+    .end h1{
+        padding:60px 70px 30px;
+        font-family: sans-serif;
+        color: rgba(255, 0, 0, 0.616) ;
+        font-weight: 500;
+        font-size: x-large;
+    }
+    .end label{
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: medium;
+        line-height: 2;
+    }
+    .end input,textarea{
+        width: 100%;
+        height: auto;
+        padding: 7px;
+        border-radius: 3px;
+        border: 1px solid rgb(198, 194, 194);
+        box-shadow: 0px 0px 2px rgb(185, 184, 184);
+    }
+    .end img{
+        margin: 30px 70px;
+        width: 200px;
+    }
+    .final{
+        text-align: center;
+    }
+    .Certifications{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .Certifications div{
+        padding: 15px;
+    }
+    .Certifications img{
+        width: 300px;
+        height: 100px;
+    }
+    .copyrights{
+        margin-top: 70px;
+        background-color: rgb(33, 32, 32);
+        color: white;
+        padding: 25px;
+        font-family: sans-serif;
+        line-height:1.5 ;
+        text-align: center;
+    }
+    @media screen and (max-width:1800px) and (min-width:860px){
+        .dropbtn hr,br{
+            display: none;
+        }
+        .dropbtn img{
+                display: none;
+        }
+    }
+
+    @media screen and (max-width:860px) and (min-width:565px){
+        .dropbtn hr,br{
+            display: none;
+        }
+        .dropbtn img{
+                display: none;
+        }
+        .Image{
+        background-image: url("event-planning.jpeg");
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+    }
+    .Image .text{
+        opacity: 0.91;
+        height: fit-content;
+        background-color: white;
+        margin: 50px;
+        text-align: center;
+    }
+    .Image .text .topic{
+        padding: 20px;
+        text-transform: uppercase;
+        font-family: sans-serif;
+    }
+    .Image .text .detail{
+        padding: 20px;
+        font-family: sans-serif;
+        font-size: medium;
+    }
+    .events{
+         display: flex;
+         flex-wrap: wrap;
+         background-color: rgb(239, 241, 243);
+         padding: 50px;
+         justify-content: center;
+    }
+    .events h2{
+        text-align: center;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 500;
+        padding: 20px 0;
+        font-size: large;
+    }
+    .events .wed {
+        padding: 30px;
+    }
+    .events .pb {
+        padding: 30px;
+    }
+    .events img{
+        width: 100%;
+        height: auto;
+    }
+    .Certifications img{
+        width: 180px;
+        height: 90px;
+    }
+    }
+    @media screen and (max-width:565px) and (min-width:300px){  
+        
+    .Navbar{
+        display: none;
+    }
+    .Navbar ul li{
+        display: block;
+    }
+    .dropbtn img{
+        padding-bottom:5px ;
+    }
+    .dropbtn:hover .Navbar{
+        display: inline-block;
+        position: relative;
+        left: -12px;
+    }
+    .Image{
+        margin-top: 25px;
+        background-image: url("event-planning.jpeg");
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+    }
+    .Image .text{
+        opacity: 0.91;
+        height: fit-content;
+        background-color: white;
+        margin: 50px;
+        text-align: center;
+    }
+    .Image .text .topic{
+        padding: 20px;
+        text-transform: uppercase;
+        font-family: sans-serif;
+    }
+    .Image .text .detail{
+        padding: 20px;
+        font-family: sans-serif;
+        font-size: medium;
+    }
+    .events{
+         display: flex;
+         flex-wrap: wrap;
+         background-color: rgb(239, 241, 243);
+         padding: 40px;
+         justify-content: center;
+    }
+    .events h2{
+        text-align: center;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 500;
+        padding: 15px 0;
+        font-size: medium;
+    }
+    .events .wed {
+        padding: 20px;
+    }
+    .events .pb {
+        padding: 20px;
+    }
+    .events img{
+        width: 100%;
+        height: auto;
+    }
+    .post{
+        margin: 10px 40px 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .post img{
+        width: 100%;
+    }
+    .post .post1{
+        width: 100%;
+        height: fit-content;
+        border: 1px solid rgb(160, 155, 155);
+        margin-bottom: 10px;
+    }
+    .post .post1 h3 a{
+        margin: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: small;
+        color: rgb(48, 47, 47);
+    }
+    .post .post1 p{
+        margin: 10px;
+        font-family: sans-serif;
+        color: rgb(118, 116, 116);
+        font-size: small;
+        line-height: 1.5;
+    }
+    .post .post2{
+        width: 100%;
+        height: fit-content;
+        border: 1px solid rgb(160, 155, 155);
+        margin-bottom: 10px;
+    }
+    .post .post2 h3 a{
+        margin: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: small;
+        color: rgb(48, 47, 47); 
+       
+    }
+    .post .post2 p{
+        margin: 10px;
+        font-family: sans-serif;
+        color: rgb(118, 116, 116);
+        font-size: small;
+        line-height: 1.5;
+    }
+    .post .post3{
+        width: 100%;
+        height: fit-content;
+        border: 1px solid rgb(160, 155, 155);
+        margin-bottom: 10px;
+    }
+    .post .post3 h3 a{
+        margin: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: small;
+        color: rgb(48, 47, 47); 
+    }
+    .post .post3 p{
+        margin: 10px;
+        font-family: sans-serif;
+        color: rgb(118, 116, 116);
+        font-size: small;
+        line-height: 1.5;
+    }
+    .end img{
+        margin: 30px 70px;
+        width: 100px;
+    }
+    .final{
+        text-align: center;
+    }
+    .Certifications img{
+        width: 100px;
+        height: 50px;
+    }
+    }
+    /* .net img{
+        height: 25px;
+        width: 25px;
+        padding: 5px;
+    }
+    .net ul{
+        list-style-type: none;
+        float: right;
+    }
+    .net ul li a{
+        display: inline;
+    } */
+
+</style>
+
+<body>
+<div class="outline">
+    <!-- <div class="net">
+        <ul>
+          <li><a href=""> <img src="insta icon.jpg" alt=""></a></li>
+          <li><a href=""><img src="google icon.jpg" alt=""> </a></li>
+          <li><a href=""> <img src="whatsapp logo.jpg" alt=""></a></li>
+          <li><a href=""> <img src="facebook icon.jpg" alt=""></a></li>
+        </ul>
+    </div> -->
+    <div class="Header">
+        <h1 class="one">Dream </h1>
+        <h1 class="two">Light</h1>
+        <p class="head">Event Planner<p>
+        <p class="content">Letting you be a guest at your own event</p> <br><br>
+    </div>
+    <div class="dropbtn" style="display: inline;">
+        <img style="width: 15px; height: 15px;float: left;" src="fas fa bar.jpg"> 
+        <div class="Navbar">
+            <ul>
+                <li><a href="Home.html">Home </a></li>
+                <li><a href="about.html">About </a></li>
+                <li><a href="service.html">Services </a></li>
+                <li><a href="review.html">Reviews </a></li>
+                <li><a href="contact.html">Contact </a></li>
+            </ul>
+        </div><br><br> <hr> 
+    </div>
+
+    <div class="Image">
+
+        <div class="text">
+            <h3 class="topic">let us take over the details while you enjoy your event</h3>
+            <p class="detail">Step into a realm where dreams unfold seamlessly. At Dream Light,
+                we specialize in turning your visions into unforgettable experiences.
+                Our team's meticulous coordination and creative flair ensure that every detail is not just managed but
+                celebrated.
+                Your event becomes a canvas, and we paint it with expertise, passion, and a touch of magic. <br> <br>
+                <br>
+
+                At the heart of our service is a commitment to crafting extraordinary moments.
+                From intimate gatherings to grand celebrations, we believe in making every event unique and memorable.
+                With Dream Light, your celebration isn't just an occasion - it's an immersive experience,
+                tailored to your desires. Trust us to elevate your events and transform them into cherished memories.
+            </p>
+        </div>
+
+    </div>
+    <div class="events">
+        <div class="wed">
+            <h2>weddings</h2>
+            <img src="marionfield-farm-wedding-photo-barn-inspiration-clinton-james-photography_71.webp" alt="">
+        </div>
+        <div class="pb">
+            <h2>professional & business</h2>
+            <img  src="Dream-Lights-Events-Business-and-Professional-Event-Planning.webp" alt="">
+        </div>
+    </div>
+    <div class="latestp">
+        <h1>our latest posts:</h1>
+        <img src="Wedding-0174.webp" alt="">
+        <h2> <a href="https://www.ceotodaymagazine.com/2022/01/5-event-management-trends-taking-centre-stage-in-2022/">you'll never see the review that says,"i wish we hired a planner!"</a></h2>
+        <p>Reading through our Google reviews the other day reminded me of the wonderful feedback we've received from wedding couples. 
+        It's amazing to see how Dream Light Events has continued to grow, even after two years of navigating a pandemic. 
+        Taking a moment to reflect on...</p>
+    </div>
+    <div class="post">
+        <div class="post1">
+            <img src="4Y9A1602-Panocopy.webp" alt="">
+            <h3><a href="https://swotandpestleanalysis.com/swot-analysis-of-wedding-event-planning/">dyi wedding factors you can't overlook</a></h3>
+            <p>If you’re planning your wedding yourself or just dipping your toes in the water, these are things that may not have come up yet, 
+                but are questions you should make sure to save to have along with you during the venue booking process. 1. Timing The timeframe for getting...</p>
+        </div>
+        <div class="post2">
+            <img src="Untitled-Facebook-Post-Landscape.webp" alt="">
+            <h3><a href="https://www.eventbrite.com/blog/event-budget-guide-ds00/">6 steps to create the perfect event budget</a></h3>
+            <p>When it comes to creating an event budget, there are many questions that have to be asked, what type of event you are
+                 planning, who is setting the budget, will there be sponsors, and whether or not it’s a one-time event or an annual event.</p>
+        </div>
+        <div class="post3">
+            <img src="suncadia-wedding8.webp" alt="">
+            <h3><a href="https://www.trustradius.com/products/cvent-event-management/reviews">suncadia - dreamy northwest ceremony location</a></h3>
+            <p>“Quiet the mind, and the soul will speak.” – Ma Jaya Sati Bhagavati Take a deep breath and stand still, take in the space. 
+                 Now listen and feel your soul speak to you.  Then you will know if the space you selected for your ceremony is the right spot for the...</p>
+        </div>
+    </div>
+    <div class="end">
+        <h1>LET'S START PLANNING!</h1>
+        <form>
+            <label>First Name*</label> <br>
+             <input type="text">  <br>
+
+            <label>Last Name*</label> <br>
+            <input type="text"> <br>
+
+            <label>Email*</label> <br>
+            <input type="e-mail"> <br>
+
+            <label>Phone Number*</label> <br>
+            <input type="number"> <br>
+
+            <label>Event Date</label> <br>
+            <input type="date"> <br>
+
+            <label>Venue Location</label> <br>
+            <input type="text"> <br>
+
+            <label>Comments</label> <br>
+            <textarea cols="100%" rows="10"></textarea>
+
+            <input type="submit" style="background-color: rgba(27, 157, 217, 0.896);width: 100%;font-size: medium; border: none; 
+            font-family: sans-serif; color: white; font-weight: 500;padding: 10px; margin: 5px 5px;text-align: center;">
+            <p style="color: blue; font-family: sans-serif; text-align: center;padding: 5px; font-size: x-small;">Powered by Event Temple</p>
+        </form>
+        <div class="final">
+        <img src="Women-Owned.webp" alt="">
+    </div>
+    </div>
+    
+    <div class="Certifications">
+    <div class="logo1"><img src="NACE-Logo.webp" ></div>
+    <div class="logo2"><img src="chamber-logo.webp" ></div>
+    <div class="logo3"><img src="men logo.jpg" ></div>
+    </div>
+    
+    <div class="copyrights">
+        <p>COPYRIGHT 2024 © DREAM LIGHT EVENTS </p>
+        <p>    TERMS OF SERVICE</p>
+    </div>
+</div>
+
+</body>
+
+</html>
